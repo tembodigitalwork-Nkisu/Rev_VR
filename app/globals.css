@@ -6,6 +6,11 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* offset for the 64px sticky nav */
+}
+
 html, body {
   background: #000;
   color: #fafafa;

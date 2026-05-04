@@ -10,6 +10,7 @@ export default function LogoMark({ className = "h-8 w-auto", priority = false })
       width={516}
       height={314}
       priority={priority}
+      sizes="80px"
       className={className}
     />
   );
