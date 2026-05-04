@@ -76,6 +76,7 @@ function LocalBusinessSchema() {
     ],
     sameAs: [
       "https://www.instagram.com/rev_vr_xperience/",
+      "https://www.tiktok.com/@rev.vr.xperience",
       "https://www.facebook.com/61571615593576",
     ],
   };

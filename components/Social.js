@@ -35,7 +35,7 @@ export default function Social() {
             Follow on Instagram
           </a>
           <a
-            href="https://www.tiktok.com/@rev_vr_xperience"
+            href="https://www.tiktok.com/@rev.vr.xperience"
             target="_blank"
             rel="noreferrer"
             className="rounded-full px-5 py-2.5 font-semibold yellow-border hover:bg-white/5"
