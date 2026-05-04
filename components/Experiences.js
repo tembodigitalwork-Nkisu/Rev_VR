@@ -1,90 +1,56 @@
-const experiences = [
-  {
-    title: "Space Walker",
-    blurb: "Float through zero-gravity, dodge debris, dock with the station.",
-    intensity: "Chill",
-    age: "8+",
-    tag: "Exploration",
-  },
-  {
-    title: "Creature Encounter",
-    blurb: "Come face-to-face with prehistoric and mythical beasts. Don't blink.",
-    intensity: "Thrilling",
-    age: "10+",
-    tag: "Adventure",
-  },
-  {
-    title: "Sky Dive",
-    blurb: "10,000 feet up. The wind, the drop, the parachute — your body believes it.",
-    intensity: "Not for the faint-hearted",
-    age: "12+",
-    tag: "Simulation",
-  },
-  {
-    title: "Zombie Defense",
-    blurb: "Co-op shooter. Hold the line with up to 4 friends.",
-    intensity: "Thrilling",
-    age: "13+",
-    tag: "Action",
-  },
-  {
-    title: "Mountain Coaster",
-    blurb: "Rollercoaster physics, alpine setting, no queue, no rain.",
-    intensity: "Chill",
-    age: "8+",
-    tag: "Ride",
-  },
-  {
-    title: "Underwater World",
-    blurb: "Swim with whales, dolphins and reef life. A favourite for first-timers.",
-    intensity: "Chill",
-    age: "All ages",
-    tag: "Exploration",
-  },
+const rides = [
+  { name: "Space Ride",    price: 120, tag: "Exploration",  intensity: "Thrilling", blurb: "Strap in for the trip nobody else is doing in Lusaka — orbit, drift, and dodge through deep space." },
+  { name: "Super 360",     price: 100, tag: "Motion ride",  intensity: "Thrilling", blurb: "Full 360° rotation rig. Flip, spin, and lose your bearings — in the best possible way." },
+  { name: "VR Paraglider", price: 120, tag: "Simulation",   intensity: "Chill",     blurb: "Soar over canyons and coastlines. Wind in your face, ground far below." },
+  { name: "VR 720",        price: 100, tag: "Motion ride",  intensity: "Thrilling", blurb: "Twin-axis ride that throws you through coasters, drops, and loops you didn't see coming." },
+  { name: "VR Racecar",    price: 50,  tag: "Racing",       intensity: "Chill",     blurb: "Wheel, pedals, racing seat. Pick a track and chase the leaderboard." },
+  { name: "The Egg",       price: 50,  tag: "Pod ride",     intensity: "Thrilling", blurb: "Single-pod cocoon ride. Short, intense, deeply weird." },
+  { name: "Three Seater",  price: 50,  tag: "Group ride",   intensity: "Chill",     blurb: "Side-by-side rig for three. Coasters, simulators, scenic flights — perfect for friends or family." },
+  { name: "VR Express",    price: 50,  tag: "Quick ride",   intensity: "Chill",     blurb: "The fast-track option — pick a clip, headset on, go. Great if you only have a few minutes." },
+  { name: "VR Bike",       price: 50,  tag: "Simulation",   intensity: "Chill",     blurb: "Pedal through cities, mountain trails, and downhill runs. A workout dressed as a game." },
+  { name: "Arcade",        price: 50,  tag: "Arcade",       intensity: "Chill",     blurb: "Classic VR arcade titles — hit, shoot, dodge, score. Re-playable forever." },
+  { name: "Self Service",  price: 50,  tag: "Free choice",  intensity: "Chill",     blurb: "Pick your own game from our library and play at your own pace." },
 ];
 
 const intensityStyles = {
-  Chill: "bg-neon-cyan/10 text-neon-cyan border-neon-cyan/30",
-  Thrilling: "bg-neon-purple/10 text-neon-purple border-neon-purple/30",
-  "Not for the faint-hearted": "bg-neon-pink/10 text-neon-pink border-neon-pink/40",
+  Chill: "bg-white/5 text-white/80 border-white/15",
+  Thrilling: "bg-brand-yellow/15 text-brand-yellow border-brand-yellow/40",
+  "Not for the faint-hearted": "bg-brand-amber/15 text-brand-amber border-brand-amber/50",
 };
 
 export default function Experiences() {
   return (
-    <section id="experiences" className="relative py-20 sm:py-28">
+    <section id="rides" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeader
-          eyebrow="Experiences"
+          eyebrow="Rides & Pricing"
           title="Pick your reality."
-          subtitle="A rotating catalog of single-player and co-op titles. Final list confirmed at the door — ask for the day's lineup."
+          subtitle="Eleven rides on rotation, all charged per person. Walk in or book ahead — we'll pair you with whatever fits your group."
         />
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {experiences.map((e) => (
+          {rides.map((r) => (
             <article
-              key={e.title}
-              className="group relative rounded-2xl p-px bg-gradient-to-br from-neon-purple/30 via-white/5 to-neon-cyan/30 hover:from-neon-purple hover:to-neon-cyan transition"
+              key={r.name}
+              className="group relative rounded-2xl p-px bg-gradient-to-br from-brand-yellow/30 via-white/5 to-brand-amber/20 hover:from-brand-yellow hover:to-brand-gold transition"
             >
-              <div className="rounded-2xl bg-ink-900/90 h-full p-5 flex flex-col">
+              <div className="rounded-2xl bg-ink-900/95 h-full p-5 flex flex-col">
                 <div className="aspect-video rounded-lg bg-gradient-to-br from-ink-800 to-ink-700 mb-4 grid place-items-center text-white/30 text-xs uppercase tracking-widest">
-                  {/* Placeholder for game artwork */}
                   Image / clip
                 </div>
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display font-semibold text-lg">{e.title}</h3>
-                  <span className="text-[10px] uppercase tracking-widest text-white/50">
-                    {e.tag}
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display font-semibold text-lg leading-tight">{r.name}</h3>
+                  <span className="shrink-0 inline-flex items-center rounded-full pill-yellow text-sm font-bold px-3 py-1">
+                    K{r.price}
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-white/70 flex-1">{e.blurb}</p>
+                <p className="mt-1 text-[10px] uppercase tracking-widest text-white/50">{r.tag}</p>
+                <p className="mt-3 text-sm text-white/70 flex-1">{r.blurb}</p>
                 <div className="mt-4 flex items-center gap-2 flex-wrap">
                   <span
-                    className={`text-[10px] px-2 py-1 rounded-full border ${intensityStyles[e.intensity]}`}
+                    className={`text-[10px] px-2 py-1 rounded-full border ${intensityStyles[r.intensity]}`}
                   >
-                    {e.intensity}
-                  </span>
-                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15 text-white/70">
-                    Age {e.age}
+                    {r.intensity}
                   </span>
                 </div>
               </div>
@@ -92,8 +58,11 @@ export default function Experiences() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-white/40">
-          [Placeholder catalog — confirm full game list with the venue]
+        <p className="mt-8 text-center text-xs text-white/50">
+          All VR rides are charged per person. Pay by mobile money, card or cash.
+        </p>
+        <p className="mt-1 text-center text-xs text-white/30">
+          [Ride descriptions are placeholders — confirm wording with the venue]
         </p>
       </div>
     </section>
@@ -103,7 +72,7 @@ export default function Experiences() {
 function SectionHeader({ eyebrow, title, subtitle }) {
   return (
     <div className="text-center max-w-2xl mx-auto">
-      <p className="text-xs uppercase tracking-[0.3em] text-neon-cyan">{eyebrow}</p>
+      <p className="text-xs uppercase tracking-[0.3em] text-brand-yellow">{eyebrow}</p>
       <h2 className="mt-3 font-display font-bold text-3xl sm:text-5xl tracking-tight">
         {title}
       </h2>

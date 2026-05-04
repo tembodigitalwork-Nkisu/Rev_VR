@@ -5,16 +5,20 @@ import { SectionHeader } from "./Experiences";
 
 const faqs = [
   {
+    q: "How much does each ride cost?",
+    a: "All rides are charged per person. Most are K50 (Racecar, Bike, The Egg, Three Seater, VR Express, Arcade, Self Service); Super 360 and VR 720 are K100; Space Ride and VR Paraglider are K120.",
+  },
+  {
     q: "Is there an age or height minimum?",
-    a: "Most experiences are 8+, with some thrill rides set at 12+ for height and motion-sickness reasons. Our staff will guide families to the right titles on arrival.",
+    a: "Most rides are 8+, with the more intense motion rides (Super 360, VR 720, Space Ride) recommended for 12+ for height and motion-sickness reasons. Our staff will guide families to the right rides on arrival.",
   },
   {
     q: "Can I just walk in, or do I need to book?",
     a: "Walk-ins are always welcome. For peak times (Friday evenings, weekends, school holidays) and for groups of 4 or more, booking ahead is strongly recommended.",
   },
   {
-    q: "How long does a session last?",
-    a: "A single session runs about 15 minutes per game. Most guests opt for the Triple Pack so they can try a few different worlds in one visit.",
+    q: "How long does a ride last?",
+    a: "Most rides run a few minutes per session. Many guests do two or three different rides on the same visit — pair a chill one (Paraglider, Bike) with a thrill one (Super 360, The Egg).",
   },
   {
     q: "Do the headsets work over glasses?",
@@ -26,7 +30,7 @@ const faqs = [
   },
   {
     q: "Will I get motion-sick?",
-    a: "Some experiences are intense; many are completely calm. Our staff will steer you toward the chill titles if it's your first time.",
+    a: "Some rides are intense; many are completely calm. Our staff will steer you toward the chill ones if it's your first time.",
   },
   {
     q: "What payment methods do you accept?",
@@ -42,10 +46,10 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
   return (
     <section id="faq" className="relative py-20 sm:py-28">
-      <div className="absolute inset-x-0 top-0 neon-divider" />
+      <div className="absolute inset-x-0 top-0 yellow-divider" />
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeader eyebrow="FAQ" title="Common questions." />
-        <div className="mt-10 divide-y divide-white/10 rounded-2xl neon-border bg-ink-900/50">
+        <div className="mt-10 divide-y divide-white/10 rounded-2xl yellow-border bg-ink-900/50">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -57,7 +61,7 @@ export default function FAQ() {
                 >
                   <span className="font-medium">{f.q}</span>
                   <span
-                    className={`shrink-0 inline-block h-6 w-6 rounded-full border border-neon-cyan/50 grid place-items-center text-neon-cyan transition ${
+                    className={`shrink-0 inline-block h-6 w-6 rounded-full border border-brand-yellow/50 grid place-items-center text-brand-yellow transition ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >

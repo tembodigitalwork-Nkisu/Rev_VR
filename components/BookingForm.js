@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { SectionHeader } from "./Experiences";
 
-const types = ["Single / Triple Pack", "Group booking", "Birthday party", "Corporate / school", "General enquiry"];
+const types = ["Single ride / walk-in", "Group booking", "Birthday party", "Corporate / school", "General enquiry"];
 
 export default function BookingForm() {
   const [form, setForm] = useState({
@@ -48,7 +48,7 @@ export default function BookingForm() {
 
   return (
     <section id="book" className="relative py-20 sm:py-28">
-      <div className="absolute inset-x-0 top-0 neon-divider" />
+      <div className="absolute inset-x-0 top-0 yellow-divider" />
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeader
           eyebrow="Book a session"
@@ -58,9 +58,9 @@ export default function BookingForm() {
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="mt-10 rounded-2xl p-px bg-gradient-to-br from-neon-purple/30 to-neon-cyan/30"
+          className="mt-10 rounded-2xl p-px bg-gradient-to-br from-brand-yellow/30 to-brand-amber/30"
         >
-          <div className="rounded-2xl bg-ink-900/90 p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="rounded-2xl bg-ink-900/95 p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Your name">
               <input
                 type="text"
@@ -123,13 +123,13 @@ export default function BookingForm() {
                 href={whatsapp()}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 text-center rounded-full px-5 py-3 font-semibold bg-neon-green text-ink-950 hover:scale-[1.01] transition shadow-glowCyan"
+                className="flex-1 text-center rounded-full px-5 py-3 font-bold pill-yellow hover:scale-[1.01] transition shadow-glowYellow"
               >
                 Send via WhatsApp
               </a>
               <a
                 href={mailto()}
-                className="flex-1 text-center rounded-full px-5 py-3 font-semibold neon-border hover:bg-white/5"
+                className="flex-1 text-center rounded-full px-5 py-3 font-semibold yellow-border hover:bg-white/5"
               >
                 Send via Email
               </a>
@@ -147,7 +147,7 @@ export default function BookingForm() {
 }
 
 const inputClass =
-  "w-full rounded-lg bg-ink-800/80 border border-white/10 px-3 py-2.5 text-white placeholder-white/30 focus:outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/40 transition";
+  "w-full rounded-lg bg-ink-800/80 border border-white/10 px-3 py-2.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/40 transition";
 
 function Field({ label, full, children }) {
   return (

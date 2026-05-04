@@ -8,17 +8,16 @@ module.exports = {
     extend: {
       colors: {
         ink: {
-          950: "#06010f",
-          900: "#0c0418",
-          800: "#140828",
-          700: "#1d0d3a",
+          950: "#000000",
+          900: "#0a0a0a",
+          800: "#141414",
+          700: "#1f1f1f",
         },
-        neon: {
-          purple: "#b14bff",
-          violet: "#7c3aed",
-          cyan: "#22d3ee",
-          green: "#39ff9c",
-          pink: "#ff3df6",
+        brand: {
+          yellow: "#FFD60A",
+          gold: "#F5C518",
+          amber: "#FFB300",
+          cream: "#FFF4B8",
         },
       },
       fontFamily: {
@@ -26,11 +25,11 @@ module.exports = {
         display: ["'Space Grotesk'", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 24px rgba(177, 75, 255, 0.45), 0 0 60px rgba(34, 211, 238, 0.25)",
-        glowCyan: "0 0 18px rgba(34, 211, 238, 0.55)",
+        glow: "0 0 24px rgba(255, 214, 10, 0.45), 0 0 60px rgba(245, 197, 24, 0.25)",
+        glowYellow: "0 0 18px rgba(255, 214, 10, 0.65)",
       },
       backgroundImage: {
-        grid: "linear-gradient(rgba(177,75,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.08) 1px, transparent 1px)",
+        grid: "linear-gradient(rgba(255,214,10,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,214,10,0.07) 1px, transparent 1px)",
       },
       animation: {
         floatSlow: "float 8s ease-in-out infinite",
@@ -42,8 +41,8 @@ module.exports = {
           "50%": { transform: "translateY(-10px)" },
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 12px rgba(57,255,156,0.55)" },
-          "50%": { boxShadow: "0 0 28px rgba(57,255,156,0.95)" },
+          "0%, 100%": { boxShadow: "0 0 12px rgba(255,214,10,0.6)" },
+          "50%": { boxShadow: "0 0 28px rgba(255,214,10,1)" },
         },
       },
     },

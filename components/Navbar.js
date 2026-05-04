@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import LogoMark from "./LogoMark";
 
 const links = [
-  { href: "#experiences", label: "Experiences" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "#rides", label: "Rides" },
   { href: "#parties", label: "Parties" },
   { href: "#visit", label: "Visit" },
   { href: "#faq", label: "FAQ" },
@@ -14,12 +14,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-ink-950/70 border-b border-white/5">
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-ink-950/80 border-b border-white/5">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 group">
-          <span className="inline-block h-8 w-8 rounded-md bg-gradient-to-br from-neon-purple to-neon-cyan shadow-glow group-hover:scale-105 transition" />
+          <LogoMark className="h-8 w-auto" />
           <span className="font-display font-bold tracking-wide text-lg">
-            REV <span className="text-glow-cyan text-neon-cyan">VR</span> Xperience
+            REV <span className="text-brand-yellow">VR</span> Xperience
           </span>
         </a>
 
@@ -28,14 +28,14 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-white/75 hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-neon-cyan after:transition-all hover:after:w-full"
+              className="text-sm text-white/75 hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-brand-yellow after:transition-all hover:after:w-full"
             >
               {l.label}
             </a>
           ))}
           <a
             href="#book"
-            className="rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-r from-neon-purple to-neon-cyan text-ink-950 shadow-glow hover:scale-[1.03] transition"
+            className="rounded-full px-4 py-2 text-sm font-bold pill-yellow shadow-glow hover:scale-[1.03] transition"
           >
             Book a session
           </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md neon-border"
+          className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md yellow-border"
         >
           <span className="sr-only">Menu</span>
           <div className="space-y-1.5">
@@ -64,7 +64,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-2 text-white/85 hover:text-neon-cyan"
+                className="py-2 text-white/85 hover:text-brand-yellow"
               >
                 {l.label}
               </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
             <a
               href="#book"
               onClick={() => setOpen(false)}
-              className="mt-2 text-center rounded-full px-4 py-2.5 font-semibold bg-gradient-to-r from-neon-purple to-neon-cyan text-ink-950"
+              className="mt-2 text-center rounded-full px-4 py-2.5 font-bold pill-yellow"
             >
               Book a session
             </a>

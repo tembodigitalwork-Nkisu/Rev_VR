@@ -17,23 +17,35 @@ Open http://localhost:3000
 - Tailwind CSS
 - Static, no backend yet — booking form opens WhatsApp / mailto
 
+## Brand
+
+- **Palette**: bright yellow (`#FFD60A`) on pure black, per the venue's own price-list artwork
+- **Logo**: yellow VR-headset mark with "REV VR XPERIENCE" wordmark — currently a CSS/SVG approximation in `components/LogoMark.js`. Drop the official SVG into `public/` and swap the import when supplied.
+
 ## What's still placeholder
 
 Search the codebase for `[Placeholder` to find every spot that needs real content:
 
-- **Pricing** — `K—` figures in `components/Pricing.js` (single, triple, group, party packages)
-- **Game catalog** — `components/Experiences.js` is a sensible-default list; replace with the venue's actual rotating titles
+- **Ride descriptions** — names and prices in `components/Experiences.js` are real (from venue price list); blurbs are sensible defaults — confirm wording with the venue
+- **Logo** — CSS/SVG approximation in `components/LogoMark.js`; replace with official asset
 - **Reels grid** — `components/Social.js` shows 6 boxes; swap for embedded Instagram/TikTok feeds at launch
 - **Map** — `components/Visit.js` has a placeholder block; embed a Google Maps iframe for Manda Hill
 - **Brochure PDF** — `components/Corporate.js` has a download button with no file
-- **Logo** — currently a gradient square; drop the real logo into `public/logo.svg` and swap in `Navbar.js` + `Footer.js`
 - **Backend for booking** — `BookingForm.js` is mailto/WhatsApp only; wire to Resend / Formspree / Supabase before launch
 - **Email address** — `bookings@revvrxperience.zm` is a guess; confirm and update
+- **Party package pricing** — `components/Pricing.js` says "TBC"; gather real birthday/squad pricing
 
-## Color scheme
+## Real ride catalog (per person)
 
-Per the brief: dark background with neon accents (electric purple, cyan, electric green, pink). Defined in `tailwind.config.js` under `colors.neon` and `colors.ink`. Update once the real logo is on hand and we can color-pick from it.
+| Ride | Price | | Ride | Price |
+|---|---|---|---|---|
+| Space Ride | K120 | | Super 360 | K100 |
+| VR Paraglider | K120 | | VR 720 | K100 |
+| VR Racecar | K50 | | The Egg | K50 |
+| Three Seater | K50 | | VR Express | K50 |
+| VR Bike | K50 | | Arcade | K50 |
+| Self Service | K50 | | | |
 
 ## Deploy
 
-`vercel` from the project root (matches the existing Vercel + Next.js workflow).
+`vercel` from the project root.

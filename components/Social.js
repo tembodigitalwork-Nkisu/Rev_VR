@@ -3,7 +3,7 @@ import { SectionHeader } from "./Experiences";
 export default function Social() {
   return (
     <section className="relative py-20 sm:py-28">
-      <div className="absolute inset-x-0 top-0 neon-divider" />
+      <div className="absolute inset-x-0 top-0 yellow-divider" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeader
           eyebrow="From our feed"
@@ -18,7 +18,7 @@ export default function Social() {
               href="https://www.instagram.com/rev_vr_xperience/"
               target="_blank"
               rel="noreferrer"
-              className="aspect-square rounded-xl bg-gradient-to-br from-ink-800 to-ink-700 neon-border grid place-items-center text-white/30 text-[10px] uppercase tracking-widest hover:scale-[1.02] transition"
+              className="aspect-square rounded-xl bg-gradient-to-br from-ink-800 to-ink-700 yellow-border grid place-items-center text-white/30 text-[10px] uppercase tracking-widest hover:scale-[1.02] transition"
             >
               Reel {i + 1}
             </a>
@@ -30,7 +30,7 @@ export default function Social() {
             href="https://www.instagram.com/rev_vr_xperience/"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full px-5 py-2.5 font-semibold neon-border hover:bg-white/5"
+            className="rounded-full px-5 py-2.5 font-semibold yellow-border hover:bg-white/5"
           >
             Follow on Instagram
           </a>
@@ -38,7 +38,7 @@ export default function Social() {
             href="https://www.tiktok.com/@rev_vr_xperience"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full px-5 py-2.5 font-semibold neon-border hover:bg-white/5"
+            className="rounded-full px-5 py-2.5 font-semibold yellow-border hover:bg-white/5"
           >
             Watch on TikTok
           </a>
