@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Do the headsets work over glasses?",
-    a: "Yes. Our headsets accommodate most glasses. If yours are unusually large, contact lenses are the safer bet.",
+    a: "Our headsets don't accommodate glasses. If you wear them, switch to contact lenses for the visit, or play without — the in-headset focus is forgiving for mild prescriptions.",
   },
   {
     q: "What about hygiene?",
