@@ -71,6 +71,12 @@ export default function Visit() {
                   </a>
                 </li>
                 <li>
+                  <span className="block text-white/50 text-xs uppercase tracking-wider">Email</span>
+                  <a href="mailto:revvrxperience@gmail.com" className="text-white hover:text-brand-yellow break-all">
+                    revvrxperience@gmail.com
+                  </a>
+                </li>
+                <li>
                   <span className="block text-white/50 text-xs uppercase tracking-wider">Instagram</span>
                   <a
                     href="https://www.instagram.com/rev_vr_xperience/"

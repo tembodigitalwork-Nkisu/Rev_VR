@@ -32,7 +32,7 @@ Search the codebase for `[Placeholder` to find every spot that needs real conten
 - **Map** — `components/Visit.js` has a placeholder block; embed a Google Maps iframe for Manda Hill
 - **Brochure PDF** — `components/Corporate.js` has a download button with no file
 - **Backend for booking** — `BookingForm.js` is mailto/WhatsApp only; wire to Resend / Formspree / Supabase before launch
-- **Email address** — `bookings@revvrxperience.zm` is a guess; confirm and update
+- **Email backend** — booking form uses `mailto:revvrxperience@gmail.com`. Wire to a real backend (Resend / Formspree / Supabase) before launch.
 - **Party package pricing** — `components/Pricing.js` says "TBC"; gather real birthday/squad pricing
 
 ## Real ride catalog (per person)

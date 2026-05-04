@@ -47,6 +47,7 @@ function LocalBusinessSchema() {
     "@id": "https://rev-vr-xperience.example",
     url: "https://rev-vr-xperience.example",
     telephone: "+260952866700",
+    email: "revvrxperience@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Manda Hill Shopping Centre, Upper Level (opposite the escalators)",

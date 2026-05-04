@@ -29,7 +29,7 @@ export default function BookingForm() {
       "Message:",
       form.message,
     ].join("\n");
-    return `mailto:bookings@revvrxperience.zm?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:revvrxperience@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const whatsapp = () => {
