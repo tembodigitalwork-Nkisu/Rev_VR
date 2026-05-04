@@ -1,5 +1,6 @@
 import SectionHeader from "./SectionHeader";
 import WhatsAppGlyph from "./WhatsAppGlyph";
+import LazyMap from "./LazyMap";
 
 const hours = [
   ["Monday", "Closed"],
@@ -21,15 +22,7 @@ export default function Visit() {
         <div className="mt-12 grid lg:grid-cols-2 gap-6">
           <div className="rounded-2xl overflow-hidden yellow-border bg-ink-900/60">
             <div className="aspect-[4/3] relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.9520107890885!2d28.304069238171277!3d-15.400305243477828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408b51c9e6ef8d%3A0x568164ac93a6406e!2sREV%20VIRTUAL%20REALITY%20XPERIENCE!5e0!3m2!1sen!2szm!4v1777899359101!5m2!1sen!2szm"
-                title="REV VR Xperience — Manda Hill, Lusaka"
-                className="absolute inset-0 w-full h-full"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <LazyMap />
             </div>
             <div className="p-5 space-y-2 text-sm">
               <p className="font-semibold text-white">REV VR Xperience</p>
