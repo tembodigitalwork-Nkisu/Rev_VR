@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-// Official REV VR XPERIENCE logo. Yellow headset with play triangle and
-// wordmark on a black background — blends onto the site's pure-black bg.
+// Official REV VR XPERIENCE logo. Transparent PNG, extracted from the
+// venue's promo artwork via scripts/extract-logo.js.
 export default function LogoMark({ className = "h-8 w-auto", priority = false }) {
   return (
     <Image
-      src="/logo.jpg"
+      src="/logo.png"
       alt="REV VR XPERIENCE"
-      width={520}
-      height={300}
+      width={516}
+      height={314}
       priority={priority}
       className={className}
     />
