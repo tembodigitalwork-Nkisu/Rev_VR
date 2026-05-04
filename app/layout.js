@@ -1,4 +1,11 @@
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
 
 export const metadata = {
   title: "REV VR Xperience — Lusaka's VR Arcade at Manda Hill",
@@ -19,17 +26,23 @@ export const metadata = {
     type: "website",
     locale: "en_ZM",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "REV VR Xperience — Lusaka's VR Arcade",
+    description:
+      "Action, adventure, space exploration. Walk-in or book ahead at Manda Hill, upstairs opposite the escalators.",
+  },
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#06010f",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={display.variable}>
       <body className="font-sans antialiased">
         {children}
         <LocalBusinessSchema />

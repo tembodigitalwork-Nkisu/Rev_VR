@@ -22,7 +22,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
-        display: ["'Space Grotesk'", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
         glow: "0 0 24px rgba(255, 214, 10, 0.45), 0 0 60px rgba(245, 197, 24, 0.25)",

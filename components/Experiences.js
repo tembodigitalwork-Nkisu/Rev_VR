@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 const rides = [
   { name: "Space Ride",    price: 120, tag: "Exploration",  intensity: "Thrilling", image: null,                       blurb: "Strap in for the trip nobody else is doing in Lusaka — orbit, drift, and dodge through deep space." },
@@ -23,6 +24,7 @@ const intensityStyles = {
 export default function Experiences() {
   return (
     <section id="rides" className="relative py-20 sm:py-28">
+      <div className="absolute inset-x-0 top-0 yellow-divider" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeader
           eyebrow="Rides & Pricing"
@@ -77,19 +79,3 @@ export default function Experiences() {
     </section>
   );
 }
-
-function SectionHeader({ eyebrow, title, subtitle }) {
-  return (
-    <div className="text-center max-w-2xl mx-auto">
-      <p className="text-xs uppercase tracking-[0.3em] text-brand-yellow">{eyebrow}</p>
-      <h2 className="mt-3 font-display font-bold text-3xl sm:text-5xl tracking-tight">
-        {title}
-      </h2>
-      {subtitle && (
-        <p className="mt-4 text-white/70">{subtitle}</p>
-      )}
-    </div>
-  );
-}
-
-export { SectionHeader };

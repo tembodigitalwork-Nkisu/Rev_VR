@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LogoMark from "./LogoMark";
 
 const links = [
@@ -12,6 +12,16 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  // Auto-close the mobile menu when the viewport crosses into desktop layout
+  // — otherwise aria-expanded reports stale state.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mql = window.matchMedia("(min-width: 768px)");
+    const handler = (e) => { if (e.matches) setOpen(false); };
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-ink-950/80 border-b border-white/5">
@@ -41,6 +51,7 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
           className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md yellow-border"
         >
@@ -54,7 +65,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-white/5 bg-ink-950/95">
+        <div id="mobile-menu" className="md:hidden border-t border-white/5 bg-ink-950/95">
           <div className="px-4 py-4 flex flex-col gap-3">
             {links.map((l) => (
               <a

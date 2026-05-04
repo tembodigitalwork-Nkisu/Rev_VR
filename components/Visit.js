@@ -1,4 +1,5 @@
-import { SectionHeader } from "./Experiences";
+import SectionHeader from "./SectionHeader";
+import WhatsAppGlyph from "./WhatsAppGlyph";
 
 const hours = [
   ["Monday", "Closed"],
@@ -66,7 +67,7 @@ export default function Visit() {
                 <ContactRow icon={<PhoneIcon />} label="Phone">
                   <a href="tel:+260952866700" className="text-white hover:text-brand-yellow">+260 95 2866700</a>
                 </ContactRow>
-                <ContactRow icon={<WhatsAppIcon />} label="WhatsApp">
+                <ContactRow icon={<WhatsAppGlyph />} label="WhatsApp">
                   <a
                     href="https://wa.me/260952866700"
                     target="_blank"
@@ -89,6 +90,16 @@ export default function Visit() {
                     className="text-white hover:text-brand-yellow"
                   >
                     @rev_vr_xperience
+                  </a>
+                </ContactRow>
+                <ContactRow icon={<TikTokIcon />} label="TikTok">
+                  <a
+                    href="https://www.tiktok.com/@rev.vr.xperience"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white hover:text-brand-yellow"
+                  >
+                    @rev.vr.xperience
                   </a>
                 </ContactRow>
               </ul>
@@ -139,20 +150,20 @@ function MailIcon() {
   );
 }
 
-function WhatsAppIcon() {
-  return (
-    <svg viewBox="0 0 32 32" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-      <path d="M19.11 17.43c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.69 4.13.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.16.16-1.28-.07-.11-.25-.18-.52-.32zM16 4C9.37 4 4 9.37 4 16c0 2.13.56 4.13 1.54 5.86L4 28l6.32-1.53A11.93 11.93 0 0 0 16 28c6.63 0 12-5.37 12-12S22.63 4 16 4zm0 21.82a9.78 9.78 0 0 1-4.99-1.36l-.36-.21-3.75.91 1-3.65-.23-.37A9.79 9.79 0 0 1 6.18 16C6.18 10.59 10.59 6.18 16 6.18S25.82 10.59 25.82 16 21.41 25.82 16 25.82z" />
-    </svg>
-  );
-}
-
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.07A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.86a8.16 8.16 0 0 0 4.77 1.52V6.93a4.85 4.85 0 0 1-1.84-.24z" />
     </svg>
   );
 }

@@ -1,4 +1,4 @@
-import { SectionHeader } from "./Experiences";
+import SectionHeader from "./SectionHeader";
 
 const benefits = [
   { title: "Team-building that isn't trust falls", desc: "Co-op missions force communication; competitive rides surface leadership." },
@@ -21,21 +21,14 @@ export default function Corporate() {
               We host HR teams, school groups, and company off-sites with rotations built around your headcount and time slot.
               Tell us the group size and the date — we'll send a tailored package.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7">
               <a
                 href="#book"
-                className="rounded-full px-5 py-2.5 font-bold pill-yellow shadow-glow"
+                className="rounded-full px-5 py-2.5 font-bold pill-yellow shadow-glow hover:scale-[1.03] transition inline-block"
               >
                 Request a package
               </a>
-              <a
-                href="#book"
-                className="rounded-full px-5 py-2.5 font-semibold yellow-border hover:bg-white/5"
-              >
-                Download brochure (PDF)
-              </a>
             </div>
-            <p className="mt-3 text-xs text-white/40">[Brochure PDF placeholder — to be added]</p>
           </div>
 
           <ul className="space-y-4">

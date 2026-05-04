@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SectionHeader } from "./Experiences";
+import SectionHeader from "./SectionHeader";
 
 const types = ["Single ride / walk-in", "Group booking", "Birthday party", "Corporate / school", "General enquiry"];
 
@@ -123,7 +123,7 @@ export default function BookingForm() {
                 href={whatsapp()}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 text-center rounded-full px-5 py-3 font-bold pill-yellow hover:scale-[1.01] transition shadow-glowYellow"
+                className="flex-1 text-center rounded-full px-5 py-3 font-bold pill-yellow hover:scale-[1.03] transition shadow-glow"
               >
                 Send via WhatsApp
               </a>
@@ -135,10 +135,6 @@ export default function BookingForm() {
               </a>
             </div>
 
-            <p className="sm:col-span-2 text-xs text-white/40">
-              [Wire to a real backend (Resend / Formspree / Supabase) before launch — currently
-              opens the user's WhatsApp or email client.]
-            </p>
           </div>
         </form>
       </div>

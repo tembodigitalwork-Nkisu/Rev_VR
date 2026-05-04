@@ -1,4 +1,4 @@
-import { SectionHeader } from "./Experiences";
+import SectionHeader from "./SectionHeader";
 
 const partyPackages = [
   {

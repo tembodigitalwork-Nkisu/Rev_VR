@@ -25,7 +25,9 @@ export default function Footer() {
           <ul className="mt-3 space-y-1.5 text-white/60">
             <li><a href="tel:+260952866700" className="hover:text-brand-yellow">+260 95 2866700</a></li>
             <li><a href="https://wa.me/260952866700" target="_blank" rel="noreferrer" className="hover:text-brand-yellow">WhatsApp</a></li>
+            <li><a href="mailto:revvrxperience@gmail.com" className="hover:text-brand-yellow break-all">revvrxperience@gmail.com</a></li>
             <li><a href="https://www.instagram.com/rev_vr_xperience/" target="_blank" rel="noreferrer" className="hover:text-brand-yellow">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@rev.vr.xperience" target="_blank" rel="noreferrer" className="hover:text-brand-yellow">TikTok</a></li>
           </ul>
         </div>
       </div>

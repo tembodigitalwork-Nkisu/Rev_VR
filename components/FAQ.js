@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SectionHeader } from "./Experiences";
+import SectionHeader from "./SectionHeader";
 
 const faqs = [
   {
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "What payment methods do you accept?",
-    a: "Mobile money (Airtel Money & MTN MoMo), card and cash. [To be confirmed with the venue.]",
+    a: "Mobile money (Airtel Money & MTN MoMo), card and cash.",
   },
   {
     q: "Do you do birthday parties?",
