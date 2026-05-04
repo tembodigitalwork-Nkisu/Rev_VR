@@ -1,7 +1,7 @@
 const rides = [
   { name: "Space Ride",    price: 120, tag: "Exploration",  intensity: "Thrilling", blurb: "Strap in for the trip nobody else is doing in Lusaka — orbit, drift, and dodge through deep space." },
-  { name: "Super 360",     price: 100, tag: "Motion ride",  intensity: "Thrilling", blurb: "Full 360° rotation rig. Flip, spin, and lose your bearings — in the best possible way." },
   { name: "VR Paraglider", price: 120, tag: "Simulation",   intensity: "Chill",     blurb: "Soar over canyons and coastlines. Wind in your face, ground far below." },
+  { name: "Super 360",     price: 100, tag: "Motion ride",  intensity: "Thrilling", blurb: "Full 360° rotation rig. Flip, spin, and lose your bearings — in the best possible way." },
   { name: "VR 720",        price: 100, tag: "Motion ride",  intensity: "Thrilling", blurb: "Twin-axis ride that throws you through coasters, drops, and loops you didn't see coming." },
   { name: "VR Racecar",    price: 50,  tag: "Racing",       intensity: "Chill",     blurb: "Wheel, pedals, racing seat. Pick a track and chase the leaderboard." },
   { name: "The Egg",       price: 50,  tag: "Pod ride",     intensity: "Thrilling", blurb: "Single-pod cocoon ride. Short, intense, deeply weird." },
