@@ -5,12 +5,7 @@ export default function Footer() {
     <footer className="relative border-t border-white/5 mt-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 grid sm:grid-cols-3 gap-8 text-sm">
         <div>
-          <div className="flex items-center gap-2">
-            <LogoMark className="h-7 w-auto" />
-            <span className="font-display font-bold tracking-wide">
-              REV <span className="text-brand-yellow">VR</span> Xperience
-            </span>
-          </div>
+          <LogoMark className="h-12 w-auto" />
           <p className="mt-3 text-white/60">
             Lusaka's first walk-in VR arcade. Manda Hill, upstairs.
           </p>

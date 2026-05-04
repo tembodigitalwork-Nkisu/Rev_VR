@@ -16,11 +16,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-ink-950/80 border-b border-white/5">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
-          <LogoMark className="h-8 w-auto" />
-          <span className="font-display font-bold tracking-wide text-lg">
-            REV <span className="text-brand-yellow">VR</span> Xperience
-          </span>
+        <a href="#top" className="flex items-center group" aria-label="REV VR Xperience — home">
+          <LogoMark className="h-10 w-auto" priority />
         </a>
 
         <div className="hidden md:flex items-center gap-7">
