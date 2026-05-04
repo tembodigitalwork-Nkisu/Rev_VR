@@ -54,6 +54,12 @@ function LocalBusinessSchema() {
       addressLocality: "Lusaka",
       addressCountry: "ZM",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -15.400305,
+      longitude: 28.304069,
+    },
+    hasMap: "https://www.google.com/maps/place/?q=place_id:ChIJjW7m6VGLQBkRbkCmk6xkgVY",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
