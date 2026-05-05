@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Venue photo background */}
       <Image
         src="/hero-bg.jpg"
@@ -46,18 +47,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#book"
+            <Link
+              href="/book"
               className="rounded-full px-6 py-3 font-bold pill-yellow shadow-glow hover:scale-[1.03] transition"
             >
               Book your session
-            </a>
-            <a
-              href="#rides"
+            </Link>
+            <Link
+              href="/rides"
               className="rounded-full px-6 py-3 font-semibold yellow-border bg-black/40 backdrop-blur-sm hover:bg-black/60 transition"
             >
               See the rides
-            </a>
+            </Link>
           </div>
 
           <dl className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">

@@ -1,5 +1,8 @@
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -8,7 +11,10 @@ const display = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "REV VR Xperience — Lusaka's VR Arcade at Manda Hill",
+  title: {
+    default: "REV VR Xperience — Lusaka's VR Arcade at Manda Hill",
+    template: "%s — REV VR Xperience",
+  },
   description:
     "Step into virtual reality at Manda Hill, Lusaka. Action, adventure, space exploration and more — book your session at REV VR Xperience.",
   keywords: [
@@ -44,7 +50,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={display.variable}>
       <body className="font-sans antialiased">
+        <Navbar />
         {children}
+        <Footer />
+        <WhatsAppButton />
         <LocalBusinessSchema />
       </body>
     </html>

@@ -1,23 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import WhatsAppGlyph from "./WhatsAppGlyph";
 
-// Hide the floating button when the user has the in-page booking form open,
-// since the form has its own "Send via WhatsApp" CTA right there.
+// Hide the floating button on /book — the form already has its own
+// "Send via WhatsApp" CTA there.
 export default function WhatsAppButton() {
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const target = document.getElementById("book");
-    if (!target || typeof IntersectionObserver === "undefined") return;
-    const obs = new IntersectionObserver(
-      ([entry]) => setHidden(entry.isIntersecting),
-      { threshold: 0.25 }
-    );
-    obs.observe(target);
-    return () => obs.disconnect();
-  }, []);
+  const pathname = usePathname();
+  const hidden = pathname === "/book";
 
   return (
     <a
